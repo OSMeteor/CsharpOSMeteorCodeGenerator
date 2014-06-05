@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{167C1F9B-BD25-4459-8431-14342D948248}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CsharpOSMeteorCodeGenerator</RootNamespace>
+    <AssemblyName>CsharpOSMeteorCodeGenerator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.TextEditor, Version=3.0.0.3437, Culture=neutral, PublicKeyToken=4d61825e8dd49f1a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ICSharpCode.TextEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="about.Designer.cs">
+      <DependentUpon>about.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ColumnData.cs" />
+    <Compile Include="Data\GetListTables.cs" />
+    <Compile Include="Data\SqlDbTypeAndDbTypeConvert.cs" />
+    <Compile Include="Data\SQLHelper.cs" />
+    <Compile Include="Data\TableData.cs" />
+    <Compile Include="Form1Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1Test.Designer.cs">
+      <DependentUpon>Form1Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_ADO_CodeGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_ADO_CodeGenerator.Designer.cs">
+      <DependentUpon>F_ADO_CodeGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_CodeGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_CodeGenerator.Designer.cs">
+      <DependentUpon>F_CodeGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_login.Designer.cs">
+      <DependentUpon>F_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Main.Designer.cs">
+      <DependentUpon>F_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BaseClass.cs" />
+    <Compile Include="Model\Column.cs" />
+    <Compile Include="Model\EModel.cs" />
+    <Compile Include="Model\OSMyNode.cs" />
+    <Compile Include="Model\Table.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="about.resx">
+      <DependentUpon>about.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1Test.resx">
+      <DependentUpon>Form1Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_ADO_CodeGenerator.resx">
+      <DependentUpon>F_ADO_CodeGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_CodeGenerator.resx">
+      <DependentUpon>F_CodeGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_login.resx">
+      <DependentUpon>F_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Main.resx">
+      <DependentUpon>F_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Control\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
